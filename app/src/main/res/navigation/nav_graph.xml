@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/UsersListFragment">
+
+    <fragment
+        android:id="@+id/UsersListFragment"
+        android:name="com.delaroystudios.vpd.users.UsersListFragment"
+        android:label="@string/users"
+        tools:layout="@layout/users_list_fragment">
+        <action
+            android:id="@+id/action_UsersListFragment_to_UserDetails"
+            app:destination="@id/UserDetails" />
+        <action
+            android:id="@+id/action_UsersListFragment_to_addUser"
+            app:destination="@id/addUser" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/UserDetails"
+        android:name="com.delaroystudios.vpd.users.UsersDetails"
+        android:label="@string/user_details"
+        tools:layout="@layout/users_details"/>
+    <fragment
+        android:id="@+id/addUser"
+        android:name="com.delaroystudios.vpd.users.AddUser"
+        android:label="AddUser" />
+
+</navigation>
